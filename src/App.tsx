@@ -1,12 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
+import {Rating, RatingValueType} from "./Components/Rating/Rating";
 
 function App() {
-  return (
-    <div className="App">
-ss
-    </div>
-  );
+    console.log('App rendering')
+
+    let [ratingvalue, setRatingValue] = useState<RatingValueType>(4)
+
+    return (
+        <div className="App">
+            <Rating value={ratingvalue} onClick={setRatingValue}/>
+        </div>
+    );
 }
 
 export default App;
